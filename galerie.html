@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galerie - FC Asnières</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav-blue full-width">
+    <div class="nav-content">
+      <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=224,fit=crop,q=95/AMq41Gq7pRUQ0lVX/img-20211126-wa0003-AE04Pe2w36hP8v6V.PNG" alt="Logo FC Asnières" class="logo"/>
+      <div class="nav-links">
+        <a href="asn.html">Accueil</a>
+        <a href="equipes.html">Équipes</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+        <a href="apropos.html">À propos</a>
+      </div>
+      <div class="nav-right">
+        <a href="https://www.skita.fr/" target="_blank" rel="noopener noreferrer">
+          <img src="https://www.skita.fr/theme/skita/images/logo.svg" alt="Logo Skita" class="logo"/></a>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Orange_logo.svg/2048px-Orange_logo.svg.png" alt="Logo Orange" class="logo"/>
+      </div>
+    </div>
+  </nav>
+
+  <main class="section-block-full">
+    <h1 class="section-title">GALERIE</h1>
+    <div class="galerie-grid">
+      <div class="galerie-item"><img src="https://assets.zyrosite.com/AMq41Gq7pRUQ0lVX/img_5432-YKbrW2KWGNC29aze.jpeg" alt="Photo 1" /></div>
+      <div class="galerie-item"><img src="https://assets.zyrosite.com/AMq41Gq7pRUQ0lVX/img_4093-YNqr7l1oalc5aOnG.jpeg" alt="Photo 2" /></div>
+      <div class="galerie-item"><img src="https://assets.zyrosite.com/AMq41Gq7pRUQ0lVX/img_1544-AwvkaBx11OtwMgaP.jpg" alt="Photo 3" /></div>
+      <div class="galerie-item"><img src="https://assets.zyrosite.com/AMq41Gq7pRUQ0lVX/img_2874-AMq4E9evrbcjjLE8.jpg" alt="Photo 4" /></div>
+      <div class="galerie-item"><img src="https://assets.zyrosite.com/AMq41Gq7pRUQ0lVX/_dsc1069-dJo4Lwk9wjFy11XY.JPG" alt="Photo 5" /></div>
+      <div class="galerie-item"><img src="https://assets.zyrosite.com/AMq41Gq7pRUQ0lVX/_dsc0192-Aq2obzVMGJFxORvR.JPG" alt="Photo 6" /></div>
+      <div class="galerie-item"><img src="https://assets.zyrosite.com/AMq41Gq7pRUQ0lVX/_dsc1085-AzG7Lxw22gIoqpQL.jpeg" alt="Photo 7" /></div>
+      <div class="galerie-item"><img src="https://assets.zyrosite.com/AMq41Gq7pRUQ0lVX/_dsc0187-A1aJ5jvpKqu3XeZn.jpeg" alt="Photo 8" /></div>
+      <div class="galerie-item"><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=656,h=459,fit=crop/AMq41Gq7pRUQ0lVX/photo-2024-08-29-09-14-56-7-YrDNvQDNj3C82L5z.jpg" alt="Photo 9" /></div>
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="lightbox-close">&times;</span>
+      <img id="lightbox-img" src="" alt="Photo agrandie" />
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FC Asnières. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.galerie-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        document.getElementById('lightbox-img').src = img.src;
+        document.getElementById('lightbox').classList.add('active');
+      });
+    });
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+  </script>
+</body>
+</html>
